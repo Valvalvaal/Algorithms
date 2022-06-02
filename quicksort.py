@@ -7,4 +7,4 @@ def qsort(array):
         greater = [i for i in array[1:] if i > pivot]
     return qsort(less) + [pivot] + qsort(greater)
 
-qsort([7,90,8,5,3,1,60])
+print(qsort([7,90,8,5,3,1,60]))
