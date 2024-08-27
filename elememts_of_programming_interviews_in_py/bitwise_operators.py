@@ -29,11 +29,13 @@ def bitwise_not(n):
     print(result)
 
 def bitwise_right_shift(n, shift):
-    "Right shift operator shifts bits, it's the same as dividing n by 2^shift"
+    "Right shift operator shifts bits, it's the same as dividing n by 2^shift (//)"
     print(f"{n}: {bin(n)}")
     result = n >> shift
     print(bin(result))
     print(result)
+
+
 
 
 bitwise_or(5,10)
