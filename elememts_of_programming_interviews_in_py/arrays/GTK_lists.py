@@ -31,3 +31,31 @@ print("\nCopying")
 print(b == a)
 print(b == list(a))
 print(b == list([2, 4, 3, 100, 200]))
+# Deep copy vs shallow copy
+import copy
+
+print("Deep copy vs Shallow copy")
+original = [[1,2],[3,4]]
+shallow_copy = original.copy()
+deep_copy = copy.deepcopy(original)
+
+shallow_copy[1][1] = 200 # Editing an element inside this shallow copy edits those 
+                         # elements in the original as well
+deep_copy[0][0] = 88
+shallow_copy.append([1])
+
+# B = A both reference the same memory location
+c = original
+c.append([900,700])
+
+# B = list(A) creates a shallow copy
+c = list(original)
+c[0][0] = 0
+
+print(original) 
+print(shallow_copy) # Copies the outer element but doesn't recursively copy the nested ones
+print(deep_copy)
+print(c)
+
+c = original
+
