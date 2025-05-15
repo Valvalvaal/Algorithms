@@ -12,7 +12,7 @@ def is_strobogrammatic(num: str):
     # l r -> 1 is strobogrammatic complement of 1, true
     #  l  -> 2 is not strobogrammatic, false
 
-    l, r = 0, len(num) - 1
+    l, r = 0, len(num) - 1 # Could be useful for other problems: Only 1 pointer works bc they move symmetrically
 
     # Check each num against its corresponding position after the flip
     while l <= r:
