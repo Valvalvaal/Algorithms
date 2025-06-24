@@ -3,7 +3,7 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-from LinkedList.LinkedList import ListNode
+from ds_v1.LinkedList.LinkedList import ListNode
 
 def remove_nth_last_node(head, n):
     
