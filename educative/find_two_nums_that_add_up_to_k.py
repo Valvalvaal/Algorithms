@@ -45,5 +45,21 @@ def find_pair(nums, k):
             return [nums[curr_idx], nums[idx_of_complement]]
         
 
+def find_pair2(nums, k):
+    # Next approach to test: using a set to mark visited nums
+    seen = set()
+    # for every num in nums, calculate complement and search for it in the
+    # seen array. If found, pair is current num and complement in seen set.
+    for curr_num in nums:
+        complement = k - curr_num
+        if complement in seen:
+            return [curr_num, complement]
+        else:
+            seen.add(curr_num)
+        
+
 print(find_pair([1,10,8,4,9], 17))
 print(find_pair([-10,-8,-7,-4,-3,0], -15))
+
+print(find_pair2([1,10,8,4,9], 17))
+print(find_pair2([-10,-8,-7,-4,-3,0], -15))
