@@ -13,14 +13,13 @@
 # ["aet","aet","ant","aet","ant","abt"] Sort each str
 # keys: "aet" values: ["eat","tea"]
 
-# sort_str(strs) -> new sorted_strs
+# sort_strs(strs) -> new sorted_strs
 # find valid anagrams by comparing the str in sorted_strs
 # add valid anagrams to dict from strs
 # get list of values
 from collections import defaultdict
 
-def group_anagrams(strs):
-    
+def group_anagrams(strs) -> list:
     #sorted_strs = sort_str(strs)
     anagrams_dict = defaultdict(list)
 
