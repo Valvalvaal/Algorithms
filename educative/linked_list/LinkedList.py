@@ -3,6 +3,7 @@ from Node import Node
 class LinkedList:
     def __init__(self):
         self.head_node = None
+        self.tail_node = None
 
     def delete_at_head(self):
         if self.is_empty():
@@ -45,17 +46,17 @@ class LinkedList:
         print(temp.data, "-> None")
         return True
 
-lst = LinkedList()
-print(lst.is_empty())
-print(lst.get_head())
+# lst = LinkedList()
+# print(lst.is_empty())
+# print(lst.get_head())
 
-lst.insert_at_head(1)
-lst.insert_at_head(3)
-lst.insert_at_head(5)
-lst.insert_at_head(6)
+# lst.insert_at_head(1)
+# lst.insert_at_head(3)
+# lst.insert_at_head(5)
+# lst.insert_at_head(6)
 
-lst.print_list()
+# lst.print_list()
 
-print("deleted: ",lst.delete_at_head())
+# print("deleted: ",lst.delete_at_head())
 
-lst.print_list()
+# lst.print_list()
